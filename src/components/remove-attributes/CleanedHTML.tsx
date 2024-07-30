@@ -32,8 +32,9 @@ export function CleanedHTML({ html }: { html: string }) {
       </CardHeader>
       <CardContent>
         {previewMode ? (
-          <Card className="min-h-[418px] resize px-3 py-2 text-sm rounded-md border border-input bg-background shadow-none">
+          <Card className="h-[418px] resize px-3 py-2 text-sm rounded-md border border-input bg-background shadow-none overflow-scroll">
             <div
+              className="prose"
               dangerouslySetInnerHTML={{
                 __html: html,
               }}
